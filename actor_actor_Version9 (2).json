@@ -1,0 +1,17 @@
+{
+    "actorSpecification": 1,
+    "name": "discord-community-insights-scraper",
+    "title": "Discord Community Insights Scraper",
+    "description": "Scrapes public/semi-public Discord servers for community sentiment.",
+    "version": "0.0",
+    "meta": {
+        "templateId": "ai-generated-actor",
+        "generatedBy": "Claude (Anthropic)"
+    },
+    "input": "./input_schema.json",
+    "output": "./output_schema.json",
+    "storages": {
+        "dataset": "./dataset_schema.json"
+    },
+    "dockerfile": "../Dockerfile"
+}

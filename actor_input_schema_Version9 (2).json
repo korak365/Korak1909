@@ -1,0 +1,128 @@
+{
+    "title": "Input schema of the Discord Community Insights Scraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Discord Server Invite URLs",
+            "type": "array",
+            "description": "Public Discord server invite URLs to analyze.",
+            "editor": "requestListSources",
+            "prefill": [
+                {
+                    "url": "https://discord.gg/example"
+                }
+            ]
+        },
+        "maxMessagesToScrape": {
+            "title": "Max Messages to Analyze",
+            "type": "integer",
+            "description": "Maximum number of messages to collect from each server.",
+            "default": 1000
+        },
+        "maxChannelsPerServer": {
+            "title": "Max Channels Per Server",
+            "type": "integer",
+            "description": "Maximum number of channels to analyze per server.",
+            "default": 10
+        },
+        "channelFilters": {
+            "title": "Channel Name Filters",
+            "type": "array",
+            "description": "Only analyze channels matching these patterns.",
+            "editor": "json",
+            "default": ["general", "discussion", "feedback", "suggestions", "announcements"]
+        },
+        "analyzeSentiment": {
+            "title": "Analyze Sentiment",
+            "type": "boolean",
+            "description": "Perform sentiment analysis on messages.",
+            "default": true
+        },
+        "extractEmojis": {
+            "title": "Extract Emoji Usage",
+            "type": "boolean",
+            "description": "Track emoji usage patterns.",
+            "default": true
+        },
+        "extractMentions": {
+            "title": "Extract Mentions & Tags",
+            "type": "boolean",
+            "description": "Extract user mentions and role tags.",
+            "default": true
+        },
+        "analyzeTone": {
+            "title": "Analyze Message Tone",
+            "type": "boolean",
+            "description": "Categorize messages by tone (question, complaint, praise, etc).",
+            "default": true
+        },
+        "extractTopics": {
+            "title": "Extract Topics",
+            "type": "boolean",
+            "description": "Identify and categorize discussion topics.",
+            "default": true
+        },
+        "trackUserActivity": {
+            "title": "Track User Activity",
+            "type": "boolean",
+            "description": "Monitor individual user activity patterns.",
+            "default": true
+        },
+        "analyzeEngagement": {
+            "title": "Analyze Engagement",
+            "type": "boolean",
+            "description": "Calculate engagement metrics (reactions, threads, etc).",
+            "default": true
+        },
+        "extractReactions": {
+            "title": "Extract Message Reactions",
+            "type": "boolean",
+            "description": "Collect emoji reactions to messages.",
+            "default": true
+        },
+        "analyzeThreads": {
+            "title": "Analyze Message Threads",
+            "type": "boolean",
+            "description": "Extract and analyze threaded conversations.",
+            "default": true
+        },
+        "timeRange": {
+            "title": "Message Time Range (days)",
+            "type": "integer",
+            "description": "Only analyze messages from last X days (0 = all available).",
+            "default": 30
+        },
+        "minimumMessageLength": {
+            "title": "Minimum Message Length (chars)",
+            "type": "integer",
+            "description": "Skip messages shorter than this.",
+            "default": 3
+        },
+        "excludeBots": {
+            "title": "Exclude Bot Messages",
+            "type": "boolean",
+            "description": "Skip messages from bot accounts.",
+            "default": true
+        },
+        "anonymizeUsers": {
+            "title": "Anonymize User Data",
+            "type": "boolean",
+            "description": "Hash/anonymize usernames in output.",
+            "default": false
+        },
+        "respectTOS": {
+            "title": "Respect Discord ToS",
+            "type": "boolean",
+            "description": "Only scrape public information and respect rate limits.",
+            "default": true
+        },
+        "outputFormat": {
+            "title": "Output Format",
+            "type": "string",
+            "description": "Export format for insights.",
+            "enum": ["json", "jsonl", "csv"],
+            "default": "json"
+        }
+    }
+}

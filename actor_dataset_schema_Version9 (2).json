@@ -1,0 +1,115 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "messages": {
+            "title": "Messages",
+            "transformation": {
+                "fields": ["messageId", "channel", "author", "timestamp", "sentiment", "engagement", "topic"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "messageId": {
+                        "label": "Message ID",
+                        "format": "text"
+                    },
+                    "channel": {
+                        "label": "Channel",
+                        "format": "text"
+                    },
+                    "author": {
+                        "label": "Author",
+                        "format": "text"
+                    },
+                    "timestamp": {
+                        "label": "Posted",
+                        "format": "date"
+                    },
+                    "sentiment": {
+                        "label": "Sentiment",
+                        "format": "text"
+                    },
+                    "engagement": {
+                        "label": "Engagement",
+                        "format": "number"
+                    },
+                    "topic": {
+                        "label": "Topic",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "sentiment": {
+            "title": "Sentiment Analysis",
+            "transformation": {
+                "fields": ["serverId", "serverName", "positive", "neutral", "negative", "score"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "serverId": {
+                        "label": "Server ID",
+                        "format": "text"
+                    },
+                    "serverName": {
+                        "label": "Server Name",
+                        "format": "text"
+                    },
+                    "positive": {
+                        "label": "Positive %",
+                        "format": "number"
+                    },
+                    "neutral": {
+                        "label": "Neutral %",
+                        "format": "number"
+                    },
+                    "negative": {
+                        "label": "Negative %",
+                        "format": "number"
+                    },
+                    "score": {
+                        "label": "Overall Score",
+                        "format": "text"
+                    }
+                }
+            }
+        },
+        "users": {
+            "title": "Users Activity",
+            "transformation": {
+                "fields": ["userId", "username", "messagesCount", "avgSentiment", "engagement", "role"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "userId": {
+                        "label": "User ID",
+                        "format": "text"
+                    },
+                    "username": {
+                        "label": "Username",
+                        "format": "text"
+                    },
+                    "messagesCount": {
+                        "label": "Messages",
+                        "format": "number"
+                    },
+                    "avgSentiment": {
+                        "label": "Avg Sentiment",
+                        "format": "text"
+                    },
+                    "engagement": {
+                        "label": "Engagement Score",
+                        "format": "number"
+                    },
+                    "role": {
+                        "label": "Role",
+                        "format": "text"
+                    }
+                }
+            }
+        }
+    }
+}

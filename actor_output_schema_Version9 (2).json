@@ -1,0 +1,36 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Output schema of the Discord Community Insights Scraper",
+    "properties": {
+        "messagesOverview": {
+            "type": "string",
+            "title": "Messages Overview",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=messages"
+        },
+        "sentimentAnalysis": {
+            "type": "string",
+            "title": "Sentiment Analysis",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=sentiment"
+        },
+        "usersActivity": {
+            "type": "string",
+            "title": "Users Activity",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=users"
+        },
+        "communityReport": {
+            "type": "string",
+            "title": "Community Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=COMMUNITY_REPORT"
+        },
+        "sentimentReport": {
+            "type": "string",
+            "title": "Sentiment Report",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=SENTIMENT_REPORT"
+        },
+        "engagementMetrics": {
+            "type": "string",
+            "title": "Engagement Metrics",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records?key=ENGAGEMENT_METRICS"
+        }
+    }
+}
